@@ -1,0 +1,10 @@
+light; sudo,dev,www-data
+idimma; sudo
+mayowa; dev,www-data
+john; admin,staff
+jane; sudo,dev,admin
+alex; www-data,staff
+mike; dev,staff
+sarah; sudo,www-data
+lisa; dev
+mark; admin,sudo
