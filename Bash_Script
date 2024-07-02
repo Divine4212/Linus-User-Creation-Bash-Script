@@ -30,7 +30,7 @@ fi
 # Ensure log directory exists
 mkdir -p /var/log
 touch $LOGFILE
-chmod 600 $LOGGFILE
+chmod 600 $LOGFILE
 
 # Ensure password directory exists and is secure
 mkdir -p /var/secure
