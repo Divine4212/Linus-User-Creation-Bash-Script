@@ -64,6 +64,4 @@ Stores the generated password in the secure password file and logs the action.
 
 Logs the completion of the user creation process and exits the script.
 
-### By following this script and the explanations, you can create users and groups as specified in the input file, 
-
-### set up home directories, generate random passwords, and log all actions for auditing and troubleshooting purposes.
+### By following this script and the explanations, you can create users and groups as specified in the input file, set up home directories, generate random passwords, and log all actions for auditing and troubleshooting purposes.
