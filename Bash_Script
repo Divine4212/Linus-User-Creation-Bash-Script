@@ -30,12 +30,12 @@ fi
 # Ensure log directory exists
 mkdir -p /var/log
 touch $LOGFILE
-chmod 600 $LOGGFILE
+sudo chmod 600 $LOGGFILE
 
 # Ensure password directory exists and is secure
 mkdir -p /var/secure
 touch $PASSFILE
-chmod 600 $PASSFILE
+sudo chmod 600 $PASSFILE
 
 # Read the input file
 while IFS=";" read -r username groups; do
@@ -67,8 +67,8 @@ while IFS=";" read -r username groups; do
     fi
 
     # Set up the home directory permissions
-    chmod 700 /home/"$username"
-    chown "$username":"$username" /home/"$username"
+    sudo chmod 700 /home/"$username"
+    sudo chown "$username":"$username" /home/"$username"
 
     # Generate a random password and set it for the user
     password=$(generate_password)
@@ -82,7 +82,7 @@ while IFS=";" read -r username groups; do
 
     # Store the generated password securely
     echo "$username:$password" >> $PASSFILE
-    chmod 600 $PASSFILE
+    sudo chmod 600 $PASSFILE
 done < "$INPUTFILE"
 
 echo "User creation process completed." | tee -a $LOGFILE
